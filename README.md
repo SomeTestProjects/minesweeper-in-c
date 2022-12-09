@@ -1,2 +1,2 @@
-# minesweeper-in-c
+# Minesweeper
 Minesweeper game in C programming language
