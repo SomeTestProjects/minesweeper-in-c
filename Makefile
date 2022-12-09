@@ -5,4 +5,4 @@ run:
 	./minesweeper
 
 clean:
-	rm minesweeper
+	-del .\\minesweeper.exe
