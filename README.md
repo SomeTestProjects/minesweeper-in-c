@@ -19,4 +19,4 @@ $ make run
 ```
 $ make clean
 ```
-[^1]: No functions and pointer were allowed to develop this game
+[^1]: No functions, matrices and pointers were allowed to develop this game
