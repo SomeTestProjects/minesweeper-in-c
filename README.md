@@ -1,5 +1,5 @@
 # Minesweeper
-Minesweeper game in C programming language
+Minesweeper game in C programming language [^1]
 
 ## Requirements
 - Windows 11 22H2
@@ -7,16 +7,16 @@ Minesweeper game in C programming language
 - GNU Make 3.81
 
 ## How to run
-### - Compile
+- Compile
 ```
 $ make
 ```
-### - Run
+- Run
 ```
 $ make run
 ```
-
-### - Clean
+- Clean
 ```
 $ make clean
 ```
+[^1]: No functions, matrices and pointers were allowed to develop this game
