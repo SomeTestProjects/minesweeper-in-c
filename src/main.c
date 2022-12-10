@@ -9,7 +9,7 @@ int main() {
 	int can_update = 1;
 	int explode = 0;
 
-	char line, column, is_start, can_continue;
+	char line, column, is_start;
 
 	int i = 0;
 	int j = 0;
@@ -86,7 +86,7 @@ int main() {
 				if (mineMap.line1[(int)(column - '0') + 1] == 'M')
 				{
 					map.line1[(int)(column - '0') + 1] = 'M';
-					running = 0;
+					running = -1;
 				}
 				else if (mineMap.line1[(int)(column - '0') + 1] == ' ') {
 					map.line1[(int)(column - '0') + 1] = ' ';
@@ -101,7 +101,7 @@ int main() {
 				if (mineMap.line2[(int)(column - '0') + 1] == 'M')
 				{
 					map.line2[(int)(column - '0') + 1] = 'M';
-					running = 0;
+					running = -1;
 				}
 				else if (mineMap.line2[(int)(column - '0') + 1] == ' ') {
 					map.line2[(int)(column - '0') + 1] = ' ';
@@ -116,7 +116,7 @@ int main() {
 				if (mineMap.line3[(int)(column - '0') + 1] == 'M')
 				{ 
 					map.line3[(int)(column - '0') + 1] = 'M';
-					running = 0;
+					running = -1;
 				}
 				else if (mineMap.line3[(int)(column - '0') + 1] == ' ') {
 					map.line3[(int)(column - '0') + 1] = ' ';
@@ -131,7 +131,7 @@ int main() {
 				if (mineMap.line4[(int)(column - '0') + 1] == 'M')
 				{ 
 					map.line4[(int)(column - '0') + 1] = 'M';
-					running = 0;
+					running = -1;
 				}
 				else if (mineMap.line4[(int)(column - '0') + 1] == ' ') {
 					map.line4[(int)(column - '0') + 1] = ' ';
@@ -146,7 +146,7 @@ int main() {
 				if (mineMap.line5[(int)(column - '0') + 1] == 'M')
 				{ 
 					map.line5[(int)(column - '0') + 1] = 'M';
-					running = 0;
+					running = -1;
 				}
 				else if (mineMap.line5[(int)(column - '0') + 1] == ' ') {
 					map.line5[(int)(column - '0') + 1] = ' ';
@@ -161,7 +161,7 @@ int main() {
 				if (mineMap.line6[(int)(column - '0') + 1] == 'M')
 				{ 
 					map.line6[(int)(column - '0') + 1] = 'M';
-					running = 0;
+					running = -1;
 				}
 				else if (mineMap.line6[(int)(column - '0') + 1] == ' ') {
 					map.line6[(int)(column - '0') + 1] = ' ';
@@ -176,7 +176,7 @@ int main() {
 				if (mineMap.line7[(int)(column - '0') + 1] == 'M')
 				{ 
 					map.line7[(int)(column - '0') + 1] = 'M';
-					running = 0;
+					running = -1;
 				}
 				else if (mineMap.line7[(int)(column - '0') + 1] == ' ') {
 					map.line7[(int)(column - '0') + 1] = ' ';
@@ -269,42 +269,49 @@ int main() {
 
 	system("cls");
 
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line0[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line1[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line2[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line3[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line4[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line5[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line6[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line7[j]);
-	printf("\n");
-	printf("\n");
+	if (running == -1) {
 
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line0[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line1[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line2[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line3[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line4[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line5[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line6[j]);
-	printf("\n");
-	for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line7[j]);
-	printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line0[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line1[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line2[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line3[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line4[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line5[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line6[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", map.line7[j]);
+		printf("\n");
+		printf("\n");
 
-	printf("\nGAME OVER...");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line0[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line1[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line2[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line3[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line4[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line5[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line6[j]);
+		printf("\n");
+		for (j = 0; j < gameSetup.screen_size_y; j++) printf("%c", mineMap.line7[j]);
+		printf("\n");
+
+		printf("\nGAME OVER!");
+	}
+	else {
+		printf("\nEXITING...");
+	}
+
 
 	return 0;
 }

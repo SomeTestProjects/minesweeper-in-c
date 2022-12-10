@@ -1,2 +1,5 @@
 # Visual Studio folder
 .\vs
+
+# .exe files
+*.exe
